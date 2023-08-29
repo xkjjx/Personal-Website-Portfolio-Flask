@@ -1,0 +1,1 @@
+A python library officially published to PyPi that simplifies some electrical engineering calculations.

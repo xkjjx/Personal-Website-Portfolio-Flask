@@ -1,0 +1,1 @@
+This project is a very simple and practical project, just putting together all the repetitive programs I had to write for my electrical engineering classes. There are many optimizations that could be made here that I might do later. Libraries for calculative purposes use C++ for a reason(speed), and a perfect implementation would use it.
