@@ -18,8 +18,25 @@ def readProjects():
 
         with open("static/ProjectInfo/{}/github.txt".format(name)) as g:
             git = g.readlines()[0].strip()
-        ProjectsList.append({"name":name,"description":description,"github":git,"shortDescription":shortDescription})
+        ProjectsList.append({"name":name,"description":description,"github":git,"shortDescription":shortDescription,"skills":skills})
     return ProjectsList
+
+def readProject(name):
+    skills = []
+    with open("static/ProjectInfo/{}/description.txt".format(name)) as d:
+        description = d.read()
+
+    with open("static/ProjectInfo/{}/shortDescription.txt".format(name)) as d:
+        shortDescription = d.readlines()[0]
+
+    with open("static/ProjectInfo/{}/skills.txt".format(name)) as s:
+        for line in s.readlines():
+            skills.append(line.strip())
+
+    with open("static/ProjectInfo/{}/github.txt".format(name)) as g:
+        git = g.readlines()[0].strip()
+
+    return {"name":name,"description":description,"github":git,"shortDescription":shortDescription,"skills":skills}
 
 def getAboutMe():
     with open("static/ProjectInfo/aboutMe.txt") as f:

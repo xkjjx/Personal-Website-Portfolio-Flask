@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Kevin Johnson</h1>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <section id="projectAbout">
+        <div class="container">
+            <h2>{{project.name}}</h2>
+            <img class="main" src="">
+            <p>{{project.description}}</p>
+            <h3>Resources:</h3>
+            <ul>
+                {% for skill in project.skills %}
+                    <li>{{skill}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>Email: john2003.kjj@gmail.com</p>
+        </div>
+    </footer>
+</body>
+</html>
