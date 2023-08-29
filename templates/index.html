@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title> <!-- Dynamic title from the Flask app -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Flask App</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Content Area</h2>
+        <p>This is an example of using Flask with HTML templates.</p>
+        <p>Dynamic content can be inserted using {{ variable_name }} syntax.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Flask App</p>
+    </footer>
+</body>
+</html>
